@@ -1,0 +1,11 @@
+<%# Este é um comentário em Ruby %>
+<% @posts.each do |post| %> 
+<%# parttial no rails, renderiza o arquivo _post.html.erb que está na mesma pasta do index.html.erb %>
+  <%= render (post) %>
+<%end%>
+
+<hr>
+<div class="text-right">
+  <%= link_to "Criar novo post", new_post_path, class: "btn btn-success" %>
+</div>
+<%# <%= render @posts   (jeito mais simples) %>

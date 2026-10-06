@@ -1,0 +1,11 @@
+<h2 class="text-muted">
+    <% if @posts.any? %>
+       <%= pluralize(@posts.count, "resultado") %> para a pesquisa "<%= params[:q] %>".
+    <% else %>
+        Nenhum resultado encontrado para a pesquisa "<%= params[:q] %>".
+    <% end %>
+</h2>
+
+<% @posts.each do |post| %>
+    <%= render post %>
+<% end %>
